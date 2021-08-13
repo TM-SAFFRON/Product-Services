@@ -15,7 +15,7 @@ app.get('/products', (req, res) => {
 
 })
 
-//params!!
+
 app.get('/products/:product_id', (req, res) => {
   model.product(req.params.product_id)
   .then(product => res.status(200).send(product))
