@@ -15,8 +15,8 @@ app.get('/products', (req, res) => {
     .catch((err) => console.log('FAILED', err));
 });
 
-app.get('/products/:product_id', (req, res) => {
-  model.product(req.params.product_id)
+app.get('/products/:product_id', async (req, res) => {
+  await model.product(req.params.product_id)
     .then((product) => res.status(200).send(product))
     .catch((err) => res.status(500).send(err));
 });
@@ -33,7 +33,7 @@ app.get('/products/:product_id/related', (req, res) => {
     .catch((err) => res.status(500).send(err));
 });
 
-const PORT = 3000;
+const PORT = 5000;
 app.listen(PORT, () => console.log('Server listening on port:', PORT));
 
 module.exports = app;
