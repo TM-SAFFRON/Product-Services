@@ -1,4 +1,5 @@
 const { Client } = require('pg');
+
 const client = new Client({
   user: 'sierra',
   host: 'localhost',
@@ -6,7 +7,7 @@ const client = new Client({
   password: 'password',
 });
 
-client.connect(err => {
+client.connect((err) => {
   if (err) {
     console.log('Error connecting to jobsite db', err);
   } else {
