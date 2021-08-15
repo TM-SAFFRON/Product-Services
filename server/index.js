@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 // const db = require('./controllers/index');
-const model = require('./models/helperQuery');
+const model = require('../db/models/helperQuery');
 
 const app = express();
 
@@ -15,11 +15,11 @@ app.get('/products', (req, res) => {
     .catch((err) => console.log('FAILED', err));
 });
 
-// app.get('/products/:product_id', async (req, res) => {
-//   await model.product(req.params.product_id)
-//     .then((product) => res.status(200).send(product))
-//     .catch((err) => res.status(500).send(err));
-// });
+app.get('/products/:product_id', (req, res) => {
+  model.getProductDetails(req.params.product_id)
+    .then((product) => res.status(200).send(product))
+    .catch((err) => res.status(500).send(err));
+});
 
 // app.get('/products/:product_id/styles', (req, res) => {
 //   model.styles(req.params.product_id)
