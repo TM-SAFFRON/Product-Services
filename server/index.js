@@ -21,11 +21,11 @@ app.get('/products/:product_id', (req, res) => {
     .catch((err) => res.status(500).send(err));
 });
 
-// app.get('/products/:product_id/styles', (req, res) => {
-//   model.styles(req.params.product_id)
-//     .then((style) => res.status(200).send(style))
-//     .catch((err) => res.status(400).send(err));
-// });
+app.get('/products/:product_id/styles', (req, res) => {
+  model.getStyles(req.params.product_id)
+    .then((style) => res.status(200).send(style))
+    .catch((err) => res.status(400).send(err));
+});
 
 // app.get('/products/:product_id/related', (req, res) => {
 //   model.related(req.params.product_id)
