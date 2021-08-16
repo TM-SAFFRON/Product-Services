@@ -27,11 +27,11 @@ app.get('/products/:product_id/styles', (req, res) => {
     .catch((err) => res.status(400).send(err));
 });
 
-// app.get('/products/:product_id/related', (req, res) => {
-//   model.related(req.params.product_id)
-//     .then((related) => res.status(200).send(related))
-//     .catch((err) => res.status(500).send(err));
-// });
+app.get('/products/:product_id/related', (req, res) => {
+  model.getRelated(req.params.product_id)
+    .then((related) => res.status(200).send(related))
+    .catch((err) => res.status(500).send(err));
+});
 
 const PORT = 5000;
 app.listen(PORT, () => console.log('Server listening on port:', PORT));
