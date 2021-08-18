@@ -2,7 +2,9 @@ const client = require('./index');
 
 module.exports = {
   getProducts: () => {
-    const pQuery = 'SELECT * FROM products LIMIT 1 OFFSET 500';
+    // const randomId = Math.floor(Math.random() * 10000);
+    // console.log('hello', randomId);
+    const pQuery = 'SELECT * FROM products GROUP BY 1';
     return client.query(pQuery)
       .then((result) => result.rows)
       .catch((err) => console.log('Error in getProducts', err));

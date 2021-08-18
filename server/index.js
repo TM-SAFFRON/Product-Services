@@ -1,4 +1,6 @@
 /* eslint-disable no-console */
+require('newrelic');
+
 const express = require('express');
 const path = require('path');
 const model = require('../db/models/helperQuery');

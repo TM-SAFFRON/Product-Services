@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/TM-SAFFRON/Product-Services#readme",
   "dependencies": {
+    "artillery": "^1.7.6",
     "express": "^4.17.1",
+    "newrelic": "^8.1.0",
     "pg": "^8.7.1"
   },
   "devDependencies": {
