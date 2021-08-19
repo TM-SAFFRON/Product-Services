@@ -10,8 +10,8 @@ const app = express();
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // routes
-app.get('/products', (req, res) => {
-  model.getProducts()
+app.get('/products', async (req, res) => {
+  await model.getProducts()
     .then((product) => res.status(200).send(product[0]))
     .catch((err) => console.log('FAILED', err));
 });

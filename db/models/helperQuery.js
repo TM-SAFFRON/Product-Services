@@ -4,7 +4,7 @@ module.exports = {
   getProducts: () => {
     // const randomId = Math.floor(Math.random() * 10000);
     // console.log('hello', randomId);
-    const pQuery = 'SELECT * FROM products GROUP BY 1';
+    const pQuery = 'SELECT * FROM products LIMIT 5';
     return client.query(pQuery)
       .then((result) => result.rows)
       .catch((err) => console.log('Error in getProducts', err));
