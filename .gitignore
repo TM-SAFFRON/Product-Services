@@ -41,6 +41,7 @@ build/Release
 node_modules/
 jspm_packages/
 newrelic.js
+db/models/config.js
 
 # TypeScript v1 declaration files
 typings/
@@ -72,7 +73,7 @@ typings/
 # dotenv environment variables file/config file
 .env
 .env.test
-config.js
+db/models/config.js
 
 
 # parcel-bundler cache (https://parceljs.org/)

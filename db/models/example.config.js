@@ -1,10 +1,10 @@
 const { Pool } = require('pg');
 
 const client = new Pool({
-  user: 'sierra',
-  host: 'localhost',
-  database: 'sdc',
-  password: 'password',
+  user: '',
+  host: '',
+  database: '',
+  password: '',
 });
 
 client.connect((err) => {
