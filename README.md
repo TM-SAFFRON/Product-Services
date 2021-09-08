@@ -1,5 +1,5 @@
 # Product-Services
-Products System Design Capstone
+A backend achitecture for a client-facing e-commerce website using NGINX, AWS EC2s, PostgreSQL, Express, and Node.js
 
 ## How to use
 1. use `npm install` for dependencies and `npm start` to start server
