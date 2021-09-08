@@ -1,5 +1,5 @@
 # Product-Services
-A backend achitecture for a client-facing e-commerce website using NGINX, AWS EC2s, PostgreSQL, Express, and Node.js
+A backend achitecture for a client-facing e-commerce website using NGINX, AWS EC2s, PostgreSQL, Express, and Node.js. Stress testing frameworks include Artillery for local and Loader.io for cloud deployment.
 
 ## How to use
 1. use `npm install` for dependencies and `npm start` to start server
